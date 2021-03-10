@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import { Link } from 'react-scroll';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -26,7 +27,7 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Projects" />
+          <Title title="Featured Work" />
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
 
@@ -47,7 +48,7 @@ const Projects = () => {
                           {info ||
                             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        <p className="mb-4"><b>{info2 || ''}</b></p>
                       </div>
                       <a
                         target="_blank"
@@ -55,7 +56,7 @@ const Projects = () => {
                         className="cta-btn cta-btn--hero"
                         href={url || '#!'}
                       >
-                        See Live
+                        Live Demo
                       </a>
 
                       {repo && (
@@ -111,6 +112,11 @@ const Projects = () => {
             );
           })}
         </div>
+        <span className="back-to-top">
+          <Link to="hero" smooth duration={1000}>
+            <i className="fa fa-angle-up fa-3x" aria-hidden="true" />
+          </Link>
+        </span>
       </Container>
     </section>
   );

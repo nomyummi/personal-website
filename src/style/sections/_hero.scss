@@ -17,9 +17,11 @@
 
   // If you want to set a background image on the hero section, uncomment these with yout custom image
 
-  /* background: url("/src/assets/[your-image].png");
-  background-position: center;
-  background-size: cover; */
+  @media (min-width: 900px) {
+    background: no-repeat url("../images/version_control.png");
+    background-position: right 17% bottom 58%;
+    background-size: 38%;
+  }
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
@@ -28,7 +30,7 @@
   .hero-title {
     font-size: 5.6rem;
     font-weight: 700;
-    margin-bottom: 3.2rem;
+    margin-bottom: 2rem;
     text-align: left;
 
     @include respond(tab-land) {
@@ -49,17 +51,36 @@
 
   .hero-cta {
     display: flex;
-
+    
     @include respond(tab-port) {
       justify-content: center;
     }
 
     & a {
       font-size: 2.4rem;
-
+      
       @include respond(phone) {
         font-size: 2rem;
       }
+    }
+  }
+}
+
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  a {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    margin: 0 2rem 0 1rem;
+    // margin: $default-font-size $default-font-size;
+    transition: all 0.2s ease-in;
+    color: $primary-color;
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 }
