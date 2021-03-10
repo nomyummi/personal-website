@@ -51,7 +51,7 @@ export const projectsData = [
     title: 'Full Stack Blog',
     info: 'A blog that connects a frontend web app to a backend API. Guests can sign up for an account, and then log in to create posts. Posts are created using a rich text editor allowing the author to add images, embed videos, use different fonts, add color to text, etc. Posts can be commented on by a guest or a user.',
     info2: 'Created using React, Node.js, Express, MongoDB, Redis, PassportJS, React Hook Form, Yup, and Quill.',
-    url: 'http://fast-refuge-07159.herokuapp.com/',
+    url: 'http://simple-blog-vx.herokuapp.com/',
     repo: 'https://github.com/nomyummi/simple-blog', // if no repo, the button will not show up
   },
   {
